@@ -1,23 +1,28 @@
+h1,h2,h3,h4,h5,h6{
+  font-weight: 500;
+  color: $ovh-blue-001;
+}
+
 h1{
-  font-size: fontSize(40px);
+  font-size: fontSize(42px);
   line-height: $defaultLineHeight;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 h2{
-  font-size: fontSize(30px);
+  font-size: fontSize(36px);
   line-height: $defaultLineHeight;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 h3{
-  font-size: fontSize(25px);
+  font-size: fontSize(30px);
   line-height: $defaultLineHeight;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 h4{
-  font-size: fontSize(20px);
+  font-size: fontSize(24px);
   line-height: $defaultLineHeight;
   margin-top: 1rem;
   margin-bottom: 1rem;

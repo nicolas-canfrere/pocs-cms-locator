@@ -1,11 +1,4 @@
 @function fontSize($pxValue) {
   @return ($pxValue / $baseSize) * 1rem;
 }
-@function color($name, $level) {
-  $levels: map_get($colors, $name);
 
-  @if map_has_key($levels, $level) {
-    @return map_get($levels, $level);
-  }
-  @return #fff;
-}

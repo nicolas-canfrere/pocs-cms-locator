@@ -1,0 +1,14 @@
+.outlined-btn{
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  border: 2px solid $ovh-blue-003;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  background-color: transparent;
+  transition: all .3s;
+  &:hover{
+    background-color: $ovh-blue-006;
+    text-decoration: none;
+  }
+}

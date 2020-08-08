@@ -1,16 +1,11 @@
 <template>
 	<div>
-		<div>filtre</div>
-		<div>
-			<partner-list></partner-list>
-		</div>
+		<router-view></router-view>
 	</div>
 </template>
 
 <script>
-	import PartnerList from '../components/PartnerList'
   export default {
     name: 'App',
-	components: { PartnerList }
   }
 </script>

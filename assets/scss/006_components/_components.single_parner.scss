@@ -1,0 +1,138 @@
+.single-partner{}
+.single-partner__logo{
+  position: relative;
+  display: flex;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  @media screen and (min-width: $partnerMobileBC){
+    display: none;
+  }
+  @media screen and (min-width: 768px){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+}
+.single-partner__header{
+  display: flex;
+  position: relative;
+
+  .single-partner__header__logo{
+    display: none;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    @media screen and (min-width: $partnerMobileBC){
+      display: flex;
+      flex: 1 0 auto;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      width: 25%;
+    }
+    @media screen and (min-width: 768px){
+      display: none;
+    }
+  }
+
+  .single-partner__header__content{
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 1rem 0;
+    width: 100%;
+    align-items: center;
+    background-color: $ovh-blue-005;
+    @media screen and (min-width: $partnerMobileBC){
+      width: 75%;
+      align-items: flex-start;
+      background-color: #fff;
+    }
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      padding: 0 0 0 2rem;
+      width: 100%;
+    }
+  }
+
+  .partner__title{
+    color: $ovh-blue-001;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 0;
+    @media screen and (min-width: $partnerMobileBC) {
+      font-size: 2.5rem;
+    }
+    @media screen and (min-width: 768px) {
+      margin-right: 1rem;
+      font-size: 3.5rem;
+    }
+  }
+
+  .partner__action{}
+
+}
+.single-partner__body{
+  background-color: $ovh-blue-005;
+  padding: 1rem 1rem;
+  border-left: 0;
+  @media screen and (min-width: 768px){
+    padding: 1rem 2rem;
+    border-left: 3px solid $ovh-blue-006;
+  }
+}
+.single-partner__section{
+  &.hide-mobile{
+    display: none;
+    @media screen and (min-width: $partnerMobileBC){
+      display: block;
+    }
+  }
+  &+.single-partner__section{
+    margin-top: 1rem;
+  }
+}
+
+.open-trusted-cloud-logo{
+  display: inline-block;
+  background-color: $ovh-blue-004;
+  color: $white;
+  font-weight: 600;
+  font-size: 1.4rem;
+  padding: 3px 12px;
+  border-radius: 100px;
+  sup{
+    font-size: .5em;
+    padding: 0 2px 0;
+  }
+  &.small{
+    font-size: 1rem;
+    padding: 2px 8px;
+  }
+}
+
+.single__partner__video{
+  padding: 2rem;
+  border-radius: .5rem;
+  border: 2px solid $ovh-blue-006;
+  background-color: #d6dff2;
+}
+
+.single__partner__images{
+  padding: 2rem;
+  border-radius: .5rem;
+  border: 2px solid $ovh-blue-004;
+  background-color: $white;
+
+  img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

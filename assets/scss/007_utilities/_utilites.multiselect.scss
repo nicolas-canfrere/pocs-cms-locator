@@ -1,0 +1,43 @@
+@import "~vue-multiselect/dist/vue-multiselect.min.css";
+
+.multiselect__tags {
+  border: 1px solid $formBorderColor;
+  background: #fff;
+}
+.multiselect__tag{
+  background-color: $ovh-blue-003;
+  font-weight: 600;
+}
+.multiselect__tag-icon:after {
+  content: "×";
+  color: $white;
+  font-size: 14px;
+}
+
+.multiselect__tag-icon:focus,
+.multiselect__tag-icon:hover {
+  background: lighten($ovh-blue-003, 10);
+}
+
+.multiselect__option--highlight {
+  background: $ovh-blue-006;
+  outline: none;
+  color: $ovh-blue-002;
+}
+
+.multiselect__option--highlight:after {
+  content: attr(data-select);
+  background: $ovh-blue-006;
+  color: $ovh-blue-002;
+}
+
+.multiselect__option--selected {
+  background: #f3f3f3;
+  color: #35495e;
+  font-weight: bold;
+}
+
+.multiselect__option--selected:after {
+  content: attr(data-selected);
+  color: silver;
+}
