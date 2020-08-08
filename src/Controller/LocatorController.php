@@ -79,6 +79,8 @@ class LocatorController extends AbstractController
             ],
         ];
 
+        sleep(3);
+
         return new JsonResponse($partners);
     }
 

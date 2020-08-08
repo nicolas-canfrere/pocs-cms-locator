@@ -25,7 +25,6 @@ export default {
         })
       })
       state.filteredPartners = unique(tmp)
-      console.log(tmp)
     }
     if (filters.countries.length) {
 

@@ -1,5 +1,5 @@
 <template>
-	<div class="partner__filter">
+	<div class="partner__filter" :class="{open: openMenu}">
 		<div class="filter__section">
 			<div class="section__title">Catégories</div>
 			<div class="section__content">
@@ -59,6 +59,7 @@
   export default {
     name: 'PartnerFilter',
 	components: { Multiselect },
+	props: ['openMenu'],
 	data() {
       return {
         allCategoriesSelected: false,

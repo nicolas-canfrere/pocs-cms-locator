@@ -14,7 +14,7 @@ $columns: 6;
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $partnerTabletBC) {
     @for $i from 1 through $columns {
       $percent: percentage($i/$columns);
       .col-#{$i} {

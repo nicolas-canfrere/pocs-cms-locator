@@ -45,3 +45,15 @@
     font-size: 60px;
   }
 }
+
+#locator{
+  overflow: hidden;
+}
+.fade-enter, .fade-leave-to{
+  opacity: 0;
+  transform: translateX(10em);
+}
+
+.fade-enter-active, .fade-leave-active{
+  transition: all .3s ease;
+}

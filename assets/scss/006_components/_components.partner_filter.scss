@@ -1,5 +1,52 @@
+.filter-opener{
+  background-color: $ovh-blue-003;
+  color: #fff;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  border-radius: .25rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 900;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  &:focus{
+    outline: none;
+  }
+  @media screen and (min-width: $partnerTabletBC){
+    display: none;
+  }
+}
+
+
+
 .partner__filter{
-  padding: 1rem .5rem 0;
+  padding: 1rem 1rem 0;
+  position: fixed;
+  width: 280px;
+  z-index: 1000;
+  background-color: #fff;
+  height: 100vh;
+  right: 0;
+  transform: translateX(100%);
+  transition: all .3s;
+  &.open{
+    transform: translateX(0);
+  }
+
+
+  @media screen and (min-width: 800px) {
+    padding: 1rem .5rem 0;
+    position: relative;
+    width: auto;
+    height: auto;
+    transform: none;
+  }
 }
 
 .partner__filter {
@@ -48,6 +95,10 @@
         right: none;
       };
     }
+    input[type=checkbox]:checked + .checkbox__square + .checkbox__label {
+      color: $baseFontColor;
+      font-weight: 700;
+    }
 
     .checkbox__square{
       width: 1.15rem;
@@ -75,9 +126,10 @@
     }
 
     .checkbox__label{
-      font-weight: 700;
+      font-weight: 500;
       line-height: 1;
       margin-left: .5rem;
+      color: lighten($baseFontColor, 15);
     }
   }
   .search{

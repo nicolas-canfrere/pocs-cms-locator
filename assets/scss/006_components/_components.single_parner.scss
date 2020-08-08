@@ -10,7 +10,7 @@
   @media screen and (min-width: $partnerMobileBC){
     display: none;
   }
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: $partnerTabletBC){
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,7 +36,7 @@
       height: 100%;
       width: 25%;
     }
-    @media screen and (min-width: 768px){
+    @media screen and (min-width: $partnerTabletBC){
       display: none;
     }
   }
@@ -53,7 +53,7 @@
       align-items: flex-start;
       background-color: #fff;
     }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $partnerTabletBC) {
       flex-direction: row;
       align-items: center;
       padding: 0 0 0 2rem;
@@ -69,7 +69,7 @@
     @media screen and (min-width: $partnerMobileBC) {
       font-size: 2.5rem;
     }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $partnerTabletBC) {
       margin-right: 1rem;
       font-size: 3.5rem;
     }
@@ -82,7 +82,7 @@
   background-color: $ovh-blue-005;
   padding: 1rem 1rem;
   border-left: 0;
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: $partnerTabletBC){
     padding: 1rem 2rem;
     border-left: 3px solid $ovh-blue-006;
   }
