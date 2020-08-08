@@ -1,0 +1,17 @@
+.demo-theme {
+  margin-bottom: 2rem;
+  .theme-section{
+    margin-top: 2rem;
+    .demo{
+      padding: 2rem;
+      background-color: color(gray-blue, 100);
+      border-radius: 4px;
+    }
+    .markup{
+      padding: 2rem;
+      background-color: color(gray-blue, 700);
+      color: #fff;
+      border-radius: 4px;
+    }
+  }
+}

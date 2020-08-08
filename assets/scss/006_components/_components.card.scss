@@ -1,0 +1,25 @@
+.card{
+  padding: 0 0 1rem;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  border-radius: 5px;
+
+  border: 1px solid #e4e4e4;
+
+  .card__header{
+    padding: 1rem 1rem 0;
+
+  }
+  .card__title{
+    font-weight: 700;
+    font-size: fontSize(18px);
+    text-transform: uppercase;
+  }
+  .card__body{
+    padding: 1rem 1rem 0;
+  }
+  .card__footer{
+    padding: 1rem 1rem 0;
+  }
+
+}

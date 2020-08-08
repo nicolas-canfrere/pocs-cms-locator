@@ -1,0 +1,6 @@
+body{
+  font-family: $defaultFontFamily;
+  line-height: $defaultLineHeight;
+  font-size: fontSize($baseSize);
+  //color: color(gray-blue, dark);
+}

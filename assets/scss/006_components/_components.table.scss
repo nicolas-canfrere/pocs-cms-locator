@@ -1,0 +1,106 @@
+//////////////////////////////////////////
+/////// variables
+//////////////////////////////////////////
+
+$tableBorderColor: #c5c5c5;
+
+//////////////////////////////////////////
+
+.table {
+  th, td{
+    transition: .2s;
+    padding: .5rem 1rem;
+    border-bottom: 1px solid $tableBorderColor;
+  }
+
+  thead {
+    tr {
+      th, td {
+        border-bottom: 2px solid $tableBorderColor;
+      }
+    }
+
+    &.thead--primary{
+      tr {
+        th, td {
+          background-color: $primary;
+          color: $primaryInverse;
+          border-bottom: 2px solid darken($primary, 7);
+        }
+      }
+    }
+  }
+}
+
+.table{
+  &.table--collapse{
+    th, td{
+      padding: 0;
+    }
+  }
+  &.table--striped{
+    tbody{
+      tr:nth-child(2n) {
+        th, td{
+          background-color: lighten($tableBorderColor, 15);
+        }
+      }
+    }
+  }
+  &.table--hover{
+    tbody{
+      tr:hover{
+        th, td{
+          background-color: lighten($tableBorderColor, 10);
+        }
+      }
+    }
+  }
+}
+
+.table{
+  &.table--primary{
+    thead {
+      tr {
+        th, td {
+          background-color: $primary;
+          color: $primaryInverse;
+          border-bottom: 2px solid darken($primary, 7);
+        }
+      }
+    }
+    th, td{
+      border-bottom: 1px solid darken($primary, 7);
+    }
+    &.table--striped{
+      tbody{
+        tr {
+          th, td{
+            background-color: $secondary;
+            color: $secondaryInverse;
+          }
+        }
+        tr:nth-child(2n) {
+          th, td{
+            background-color: lighten($primary, 5);
+            color: $primaryInverse;
+          }
+        }
+      }
+    }
+    &.table--hover{
+      tbody{
+        tr:hover{
+          th, td{
+            background-color: lighten($secondary, 10);
+          }
+        }
+      }
+    }
+  }
+}
+
+.table-responsive{
+  width: 100%;
+  overflow-x: auto;
+}
