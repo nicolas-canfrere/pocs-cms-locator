@@ -3,12 +3,13 @@
 @import "utilities.icons";
 @import "utilites.multiselect";
 
-.video-resp{
+.video-resp {
   width: 100%;
   position: relative;
   height: 0;
   padding-bottom: 56.25%;
-  iframe{
+
+  iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -17,19 +18,20 @@
   }
 }
 
-.img-resp{
+.img-resp {
   display: block;
   width: 100%;
   height: auto;
 }
-.show-mobile-only{
+
+.show-mobile-only {
   display: block;
-  @media screen and (min-width: $partnerMobileBC){
+  @media screen and (min-width: $partnerMobileBC) {
     display: none;
   }
 }
 
-.overlay{
+.overlay {
   position: fixed;
   top: 0;
   right: 0;
@@ -41,25 +43,26 @@
   justify-content: center;
   align-items: center;
 
-  .loader{
+  .loader {
     font-size: 60px;
   }
 }
 
-#locator{
+#locator {
   overflow-x: hidden;
   min-height: 100vh;
 }
-.fade-enter, .fade-leave-to{
+
+.fade-enter, .fade-leave-to {
   opacity: 0;
   transform: translateX(10em);
 }
 
-.fade-enter-active, .fade-leave-active{
+.fade-enter-active, .fade-leave-active {
   transition: all .3s ease;
 }
 
-.expand-filter-section-enter-active, .expand-filter-section-leave-active{
+.expand-filter-section-enter-active, .expand-filter-section-leave-active {
   transition: height .3s ease-in-out;
   overflow: hidden;
 }

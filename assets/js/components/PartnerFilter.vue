@@ -33,7 +33,6 @@
 					</a>
 				</div>
 			</transition>
-
 		</div>
 		<div class="filter__section" v-show="countries.length > 1">
 			<div class="section__title" @click="countrySectionOpen = !countrySectionOpen"

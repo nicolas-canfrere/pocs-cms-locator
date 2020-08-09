@@ -4,10 +4,12 @@
   border: 1px solid $formBorderColor;
   background: #fff;
 }
-.multiselect__tag{
+
+.multiselect__tag {
   background-color: $ovh-blue-003;
   font-weight: 600;
 }
+
 .multiselect__tag-icon:after {
   content: "×";
   color: $white;

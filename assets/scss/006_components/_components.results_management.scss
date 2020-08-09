@@ -1,14 +1,12 @@
-.results-management{
+.results-management {
   display: flex;
   padding: 1rem 1rem 1rem;
 
-  .spacer{
+  .spacer {
     margin-left: auto;
   }
 
-
-
-  select{
+  select {
     border: 1px solid $formBorderColor;
     background-color: #fff;
     color: inherit;
@@ -16,10 +14,9 @@
     border-radius: $formBorderRadius;
     min-height: $formMinHeight;
     outline: none;
-    &:focus{
+
+    &:focus {
       outline: none;
     }
   }
-
-
 }

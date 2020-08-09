@@ -53,7 +53,6 @@
 					</p>
 				</div>
 			</div>
-
 			<div class="loc-grid mt-16">
 				<div class="col">
 					<div class="single__partner__video">
@@ -98,10 +97,8 @@
 				</div>
 				<div class="col-1"></div>
 			</div>
-
 		</div>
 	</div>
-
 </template>
 
 <script>
@@ -123,9 +120,9 @@
     created () {
       const id = parseInt(this.$route.params.id)
       this.partner = this.partnerById(id)
-	  if (!this.partner) {
-	    this.$router.push({name: 'home'})
-	  }
+      if (!this.partner) {
+        this.$router.push({ name: 'home' })
+      }
       this.partnerLogo = window.urlImg + this.partner.logo
     }
   }

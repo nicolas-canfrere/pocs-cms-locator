@@ -1,4 +1,4 @@
-.mobile-menu-overlay{
+.mobile-menu-overlay {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -7,11 +7,13 @@
   background-color: rgba(#000, .8);
   z-index: 950;
   display: none;
-  &.open{
+
+  &.open {
     display: block;
   }
 }
-.filter-opener{
+
+.filter-opener {
   background-color: $ovh-blue-003;
   color: #fff;
   position: fixed;
@@ -28,17 +30,17 @@
   padding: 0;
   cursor: pointer;
   outline: none;
-  &:focus{
+
+  &:focus {
     outline: none;
   }
-  @media screen and (min-width: $partnerTabletBC){
+
+  @media screen and (min-width: $partnerTabletBC) {
     display: none;
   }
 }
 
-
-
-.partner__filter{
+.partner__filter {
   padding: 1rem 1rem 0;
   position: fixed;
   width: 280px;
@@ -48,7 +50,8 @@
   right: 0;
   transform: translateX(100%);
   transition: all .3s;
-  &.open{
+
+  &.open {
     transform: translateX(0);
   }
 
@@ -63,11 +66,12 @@
 }
 
 .partner__filter {
-  .filter__section{
-    &+.filter__section{
+  .filter__section {
+    & + .filter__section {
       margin-top: 1rem;
     }
-    .section__title{
+
+    .section__title {
       font-size: 1.2rem;
       font-weight: 700;
       color: $ovh-blue-003;
@@ -76,46 +80,54 @@
       margin-bottom: 1.125rem;
       padding-right: 20px;
 
-      &.section-open{
-        .section__title_arrow{
+      &.section-open {
+        .section__title_arrow {
           transform: rotateZ(-180deg);
         }
       }
 
-      .section__title_arrow{
+      .section__title_arrow {
         position: absolute;
         transition: transform .3s ease-in-out;
         right: 1px;
         top: 5px;
       }
     }
-    .section__content{}
+
+    .section__content {
+    }
   }
 }
 
 .partner__filter {
-  .select-all{
+  .select-all {
     font-weight: 600;
     text-decoration: none;
-    &:hover{
+
+    &:hover {
       text-decoration: none;
     }
   }
-  .checkbox{
+
+  .checkbox {
     display: inline-flex;
-    label{
+
+    label {
       display: inline-flex;
       cursor: pointer;
-      &:hover{
-        .checkbox__square{
+
+      &:hover {
+        .checkbox__square {
           background-color: $ovh-blue-006;
         }
       }
     }
+
     input[type=checkbox] {
       display: none;
     }
-    input[type=checkbox]:checked + .checkbox__square .checkbox__check{
+
+    input[type=checkbox]:checked + .checkbox__square .checkbox__check {
       border: {
         left: 2px solid $ovh-blue-003;
         bottom: 2px solid $ovh-blue-003;
@@ -123,12 +135,13 @@
         right: none;
       };
     }
+
     input[type=checkbox]:checked + .checkbox__square + .checkbox__label {
       color: $baseFontColor;
       font-weight: 700;
     }
 
-    .checkbox__square{
+    .checkbox__square {
       width: 1.15rem;
       height: 1.15rem;
       display: block;
@@ -137,7 +150,8 @@
       border-radius: 3px;
       position: relative;
     }
-    .checkbox__check{
+
+    .checkbox__check {
       position: absolute;
       width: 1.15rem;
       height: .5rem;
@@ -153,28 +167,32 @@
       bottom: 7px;
     }
 
-    .checkbox__label{
+    .checkbox__label {
       font-weight: 500;
       line-height: 1;
       margin-left: .5rem;
       color: lighten($baseFontColor, 15);
     }
   }
-  .search{
+
+  .search {
     position: relative;
-    input[type=text]{
+
+    input[type=text] {
       border: 1px solid $formBorderColor;
       width: 100%;
       min-height: $formMinHeight;
       padding: .5rem 40px .5rem 1rem;
       border-radius: $formBorderRadius;
-      &:focus{
+
+      &:focus {
         background-color: $ovh-blue-005;
         border: 1px solid $formBorderColor;
         outline: none;
       }
     }
-    .icon{
+
+    .icon {
       position: absolute;
       right: 1px;
       top: 1px;

@@ -39,20 +39,20 @@
   export default {
     name: 'Home',
     components: { PartnerFilter, PartnerList },
-	data () {
+    data () {
       return {
         openFilterMenu: false
-	  }
-	},
-	methods: {
+      }
+    },
+    methods: {
       orderBy (event) {
-		this.$store.dispatch('reorderPartnersBy', event.target.value)
-	  }
-	},
-	created () {
+        this.$store.dispatch('reorderPartnersBy', event.target.value)
+      }
+    },
+    created () {
       window.addEventListener('resize', e => {
         this.openFilterMenu = false
-	  }, false)
-	}
+      }, false)
+    }
   }
 </script>

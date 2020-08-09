@@ -7,20 +7,20 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: "/",
-    name: "home",
+    path: '/',
+    name: 'home',
     component: Home
   },
   {
-    path: "/partner/:id",
-    name: "single",
+    path: '/partner/:id',
+    name: 'single',
     component: SinglePartner
   }
 ]
 
 const router = new VueRouter({
-  scrollBehavior() {
-    return { x: 0, y: 0 };
+  scrollBehavior () {
+    return { x: 0, y: 0 }
   },
   routes
 })

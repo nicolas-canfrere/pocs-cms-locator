@@ -2,7 +2,6 @@ $columns: 6;
 .loc-grid{
   display: flex;
   flex-wrap: wrap;
-
   .col{
     flex-basis: 0;
     flex-grow: 1;
@@ -13,7 +12,6 @@ $columns: 6;
       flex: 0 0 100%;
     }
   }
-
   @media screen and (min-width: $partnerTabletBC) {
     @for $i from 1 through $columns {
       $percent: percentage($i/$columns);

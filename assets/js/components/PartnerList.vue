@@ -1,6 +1,8 @@
 <template>
 	<div>
-		<div v-show="controlPartnersInitialized === false" class="overlay"><div class="loader"><i class="fas fa-spinner fa-spin"></i></div></div>
+		<div v-show="controlPartnersInitialized === false" class="overlay">
+			<div class="loader"><i class="fas fa-spinner fa-spin"></i></div>
+		</div>
 		<div class="partner__grid">
 			<partner
 					v-for="(partner,index) in partners"
@@ -22,11 +24,11 @@
     data () {
       return {}
     },
-	computed: {
+    computed: {
       ...mapGetters({
         controlPartnersInitialized: 'controlPartnersInitialized',
-		partners: 'filteredPartners'
-	  })
-	}
+        partners: 'filteredPartners'
+      })
+    }
   }
 </script>

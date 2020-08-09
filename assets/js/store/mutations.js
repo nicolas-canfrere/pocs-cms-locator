@@ -114,7 +114,7 @@ export default {
           }
           return 0
         })
-        break;
+        break
       case 'alphaDesc':
         state.filteredPartners.sort((a, b) => {
           const titleA = a.title.toLowerCase()
@@ -127,9 +127,9 @@ export default {
           }
           return 0
         })
-        break;
+        break
       default:
-        break;
+        break
     }
   }
 }

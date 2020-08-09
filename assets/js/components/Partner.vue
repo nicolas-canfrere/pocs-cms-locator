@@ -7,7 +7,6 @@
 			<div class="partner__body">
 				<div class="partner__title">
 					{{partner.title}} - {{partner.certification_level.label}}
-
 				</div>
 				<div class="partner__content">
 					<div class="partner__excerpt">
@@ -25,12 +24,9 @@
 			</div>
 		</div>
 	</div>
-
 </template>
 
 <script>
-
-
   export default {
     name: 'Partner',
     props: ['partner', 'isfirst'],
