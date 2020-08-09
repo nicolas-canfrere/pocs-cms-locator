@@ -1,6 +1,6 @@
 <template>
 	<div class="partner__filter" :class="{open: openMenu}">
-		<div class="filter__section">
+		<div class="filter__section" v-show="categories.length > 1">
 			<div class="section__title">Catégories</div>
 			<div class="section__content">
 				<ul class="unstyled p-0 mb-2">
@@ -22,7 +22,7 @@
 				</a>
 			</div>
 		</div>
-		<div class="filter__section">
+		<div class="filter__section" v-show="countries.length > 1">
 			<div class="section__title">Localisation</div>
 			<div class="section__content">
 				<multiselect
