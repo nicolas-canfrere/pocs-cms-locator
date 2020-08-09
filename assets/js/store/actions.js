@@ -49,5 +49,13 @@ export default {
   removeCategoryToFilters: ({commit, dispatch}, category) => {
     commit('REMOVE_CATEGORY_TO_FILTERS', category)
     dispatch('filterPartner')
-  }
+  },
+  addCountryToFilters: ({commit, dispatch}, country) => {
+    commit('ADD_COUNTRY_TO_FILTERS', country)
+    dispatch('filterPartner')
+  },
+  removeCountryToFilters: ({commit, dispatch}, country) => {
+    commit('REMOVE_COUNTRY_TO_FILTERS', country)
+    dispatch('filterPartner')
+  },
 }

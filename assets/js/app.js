@@ -3,6 +3,8 @@ import store from './store'
 import router from './routing'
 import App from './views/App'
 
+Vue.config.productionTip = false
+
 store.dispatch('initPartners')
 store.dispatch('initCategories')
 store.dispatch('initCountries')

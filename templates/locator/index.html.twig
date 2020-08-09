@@ -3,3 +3,11 @@
 {% block body %}
     <div id="locator"></div>
 {% endblock %}
+
+{% block footscripts %}
+    <script>
+        window.urlImg = '{{ urlImg }}';
+    </script>
+    {{ parent() }}
+{% endblock %}
+

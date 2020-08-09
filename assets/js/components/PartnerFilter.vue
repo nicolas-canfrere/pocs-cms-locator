@@ -26,17 +26,19 @@
 			<div class="section__title">Localisation</div>
 			<div class="section__content">
 				<multiselect
-					v-model="selectedCountries"
+					:value="filters.countries"
 					:options="countries"
 					:multiple="true"
 					:close-on-select="false"
 					:clear-on-select="false"
 					:preserve-search="false"
 					placeholder="Rechercher..."
-					label="name"
+					label="label"
 					track-by="id"
 					:preselect-first="false"
-					:taggable="false"
+					:taggable="true"
+					@select="addCountry"
+					@remove="removeCountry"
 				>
 				</multiselect>
 			</div>
@@ -55,27 +57,33 @@
 
 <script>
   import Multiselect from 'vue-multiselect'
-  import { mapGetters } from 'vuex'
+  import { mapGetters, mapState } from 'vuex'
   export default {
     name: 'PartnerFilter',
 	components: { Multiselect },
 	props: ['openMenu'],
 	data() {
       return {
-        allCategoriesSelected: false,
-		selectedCountries: [],
+        allCategoriesSelected: false
 	  }
 	},
 	computed: {
       ...mapGetters({
         categories: 'allCategories',
 		countries: 'allCountries'
-	  })
+	  }),
+	  ...mapState(['filters'])
 	},
 	methods: {
       toggleFilterCategory (category) {
 		this.$store.dispatch('toggleCategoryToFilters', category)
 	  },
+	  addCountry (country) {
+		this.$store.dispatch('addCountryToFilters', country)
+	  },
+      removeCountry (country) {
+        this.$store.dispatch('removeCountryToFilters', country)
+      },
       toggleAllCategories () {
         if (this.allCategoriesSelected) {
           this.allCategoriesSelected = false

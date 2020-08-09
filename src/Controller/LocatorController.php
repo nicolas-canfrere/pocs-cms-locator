@@ -12,7 +12,12 @@ class LocatorController extends AbstractController
 {
     public function index()
     {
-        return $this->render('locator/index.html.twig');
+        return $this->render(
+            'locator/index.html.twig',
+            [
+                'urlImg' => 'https://via.placeholder.com',
+            ]
+        );
     }
 
     public function listPartners(Request $request)
@@ -24,62 +29,80 @@ class LocatorController extends AbstractController
         $partners = [
             [
                 'id'           => 1,
-                'name'         => '#Name Solution 1',
-                'availability' => '#localisation',
+                'title'         => '#Name Solution',
+                'certification_level' => ['label' => 'cert 1', 'id' => 1],
+                'availability' => '#country_partner',
                 'url'          => 'https://www.google.com',
-                'logo'         => 'https://via.placeholder.com/400x150/FFFFFF/CCCCCC/?text=Partner+logo',
+                'logo'         => '/400x150/FFFFFF/CCCCCC/?text=Partner+logo',
                 'description'  => '1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla.',
-                'excerpt'      => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla. Phasellus suscipit nunc accumsan rutrum finibus. Phasellus neque leo, ultrices vel luctus vitae, tempor ac mauris. Fusce a vulputate mauris.',
-                'categories'   => [1, 2],
-                'localisation' => 1
+                'summary_descrip'      => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla. Phasellus suscipit nunc accumsan rutrum finibus. Phasellus neque leo, ultrices vel luctus vitae, tempor ac mauris. Fusce a vulputate mauris.',
+                'partnerTags' => [
+                    ['id' => 1, 'name' => 'Category 1'],
+                    ['id' => 2, 'name' => 'Category 2'],
+                ],
+                'country_partner' => ['id' => 1, 'label' => 'France'],
             ],
             [
                 'id'           => 2,
-                'name'         => '#Name Solution 2',
-                'availability' => '#localisation',
+                'title'         => '#Name Solution',
+                'certification_level' => ['label' => 'cert 2', 'id' => 2],
+                'availability' => '#country_partner',
                 'url'          => 'https://www.google.com',
-                'logo'         => 'https://via.placeholder.com/400x150/FFFFFF/CCCCCC/?text=Partner+logo',
+                'logo'         => '/400x150/FFFFFF/CCCCCC/?text=Partner+logo',
                 'description'  => '2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla.',
-                'excerpt'      => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla. Phasellus suscipit nunc accumsan rutrum finibus. Phasellus neque leo, ultrices vel luctus vitae, tempor ac mauris. Fusce a vulputate mauris.',
-                'categories'   => [2, 3],
-                'localisation' => 2
+                'summary_descrip'      => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla. Phasellus suscipit nunc accumsan rutrum finibus. Phasellus neque leo, ultrices vel luctus vitae, tempor ac mauris. Fusce a vulputate mauris.',
+                'partnerTags' => [
+                    ['id' => 2, 'name' => 'Category 2'],
+                    ['id' => 3, 'name' => 'Category 3'],
+                ],
+                'country_partner' => ['id' => 3, 'label' => 'Allemagne'],
             ],
             [
                 'id'           => 3,
-                'name'         => '#Name Solution 3',
-                'availability' => '#localisation',
+                'title'         => '#Name Solution',
+                'certification_level' => ['label' => 'cert 3', 'id' => 3],
+                'availability' => '#country_partner',
                 'url'          => 'https://www.google.com',
-                'logo'         => 'https://via.placeholder.com/400x150/FFFFFF/CCCCCC/?text=Partner+logo',
+                'logo'         => '/400x150/FFFFFF/CCCCCC/?text=Partner+logo',
                 'description'  => '3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla.',
-                'excerpt'      => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla. Phasellus suscipit nunc accumsan rutrum finibus. Phasellus neque leo, ultrices vel luctus vitae, tempor ac mauris. Fusce a vulputate mauris.',
-                'categories'   => [3, 4],
-                'localisation' => 3
+                'summary_descrip'      => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla. Phasellus suscipit nunc accumsan rutrum finibus. Phasellus neque leo, ultrices vel luctus vitae, tempor ac mauris. Fusce a vulputate mauris.',
+                'partnerTags' => [
+                    ['id' => 3, 'name' => 'Category 3'],
+                    ['id' => 4, 'name' => 'Category 4'],
+                ],
+                'country_partner' => ['id' => 4, 'label' => 'Belgique'],
             ],
             [
                 'id'           => 4,
-                'name'         => '#Name Solution 4',
-                'availability' => '#localisation',
+                'title'         => '#Name Solution',
+                'certification_level' => ['label' => 'cert 1', 'id' => 1],
+                'availability' => '#country_partner',
                 'url'          => 'https://www.google.com',
-                'logo'         => 'https://via.placeholder.com/400x150/FFFFFF/CCCCCC/?text=Partner+logo',
+                'logo'         => '/400x150/FFFFFF/CCCCCC/?text=Partner+logo',
                 'description'  => '4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla.',
-                'excerpt'      => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla. Phasellus suscipit nunc accumsan rutrum finibus. Phasellus neque leo, ultrices vel luctus vitae, tempor ac mauris. Fusce a vulputate mauris.',
-                'categories'   => [4, 5],
-                'localisation' => 4
+                'summary_descrip'      => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla. Phasellus suscipit nunc accumsan rutrum finibus. Phasellus neque leo, ultrices vel luctus vitae, tempor ac mauris. Fusce a vulputate mauris.',
+                'partnerTags' => [
+                    ['id' => 4, 'name' => 'Category 4'],
+                    ['id' => 5, 'name' => 'Category 5'],
+                ],
+                'country_partner' => ['id' => 1, 'label' => 'France'],
             ],
             [
                 'id'           => 5,
-                'name'         => '#Name Solution 5',
-                'availability' => '#localisation',
+                'title'         => '#Name Solution',
+                'certification_level' => ['label' => 'cert 2', 'id' => 2],
+                'availability' => '#country_partner',
                 'url'          => 'https://www.google.com',
-                'logo'         => 'https://via.placeholder.com/400x150/FFFFFF/CCCCCC/?text=Partner+logo',
+                'logo'         => '/400x150/FFFFFF/CCCCCC/?text=Partner+logo',
                 'description'  => '5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla.',
-                'excerpt'      => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla. Phasellus suscipit nunc accumsan rutrum finibus. Phasellus neque leo, ultrices vel luctus vitae, tempor ac mauris. Fusce a vulputate mauris.',
-                'categories'   => [2, 4],
-                'localisation' => 5
+                'summary_descrip'      => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla. Phasellus suscipit nunc accumsan rutrum finibus. Phasellus neque leo, ultrices vel luctus vitae, tempor ac mauris. Fusce a vulputate mauris.',
+                'partnerTags' => [
+                    ['id' => 2, 'name' => 'Category 2'],
+                    ['id' => 4, 'name' => 'Category 4'],
+                ],
+                'country_partner' => ['id' => 5, 'label' => 'Italie']
             ],
         ];
-
-        sleep(3);
 
         return new JsonResponse($partners);
     }
@@ -108,11 +131,11 @@ class LocatorController extends AbstractController
         }
 
         $countries = [
-            ['id' => 1, 'name' => 'France', 'selected' => false],
-            ['id' => 2, 'name' => 'Angleterre', 'selected' => false],
-            ['id' => 3, 'name' => 'Allemagne', 'selected' => false],
-            ['id' => 4, 'name' => 'Belgique', 'selected' => false],
-            ['id' => 5, 'name' => 'Italie', 'selected' => false],
+            ['id' => 1, 'label' => 'France', 'selected' => false],
+            ['id' => 2, 'label' => 'Angleterre', 'selected' => false],
+            ['id' => 3, 'label' => 'Allemagne', 'selected' => false],
+            ['id' => 4, 'label' => 'Belgique', 'selected' => false],
+            ['id' => 5, 'label' => 'Italie', 'selected' => false],
         ];
 
         return new JsonResponse($countries);

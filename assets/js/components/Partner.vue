@@ -2,19 +2,19 @@
 	<div class="partner__wrapper" :class="{expanded: isfirst}">
 		<div class="partner" :class="{expanded: isfirst}">
 			<div class="partner__logo">
-				<img :src="partner.logo" alt="">
+				<img :src="partnerLogo" alt="">
 			</div>
 			<div class="partner__body">
 				<div class="partner__title">
-					{{partner.name}}
+					{{partner.title}} - {{partner.certification_level.label}}
 
 				</div>
 				<div class="partner__content">
 					<div class="partner__excerpt">
-						{{partner.excerpt}}
+						{{partner.summary_descrip}}
 					</div>
 					<div class="partner__infos">
-						Disponibilité: <span class="text-bold">{{partner.availability}}</span>
+						Disponibilité: <span class="text-bold">{{partner.country_partner.label}}</span>
 					</div>
 				</div>
 				<div class="partner__footer">
@@ -34,6 +34,13 @@
   export default {
     name: 'Partner',
     props: ['partner', 'isfirst'],
-
+	data () {
+      return {
+        partnerLogo: ''
+	  }
+	},
+	created () {
+      this.partnerLogo = window.urlImg + this.partner.logo
+	}
   }
 </script>

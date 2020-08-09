@@ -9,16 +9,16 @@
 			<div class="loc-grid single-partner">
 				<div class="col-2">
 					<div class="single-partner__logo">
-						<img :src="partner.logo" alt="">
+						<img :src="partnerLogo" alt="">
 					</div>
 				</div>
 				<div class="col-4">
 					<div class="single-partner__header">
 						<div class="single-partner__header__logo">
-							<img :src="partner.logo" alt="">
+							<img :src="partnerLogo" alt="">
 						</div>
 						<div class="single-partner__header__content">
-							<div class="partner__title">{{partner.name}}</div>
+							<div class="partner__title">{{partner.title}} - {{partner.certification_level.label}}</div>
 							<div class="show-mobile-only mb-4 mt-4">
 								<span class="open-trusted-cloud-logo small"><i
 										class="fas fa-cloud fa-flip-horizontal"></i> Open Trusted Cloud<sup>tm</sup></span>
@@ -30,10 +30,10 @@
 					</div>
 					<div class="single-partner__body">
 						<div class="single-partner__section">
-							{{partner.excerpt}}
+							{{partner.summary_descrip}}
 						</div>
 						<div class="single-partner__section">
-							Disponibilité: <span class="text-bold">{{partner.availability}}</span>
+							Disponibilité: <span class="text-bold">{{partner.country_partner.label}}</span>
 						</div>
 						<div class="single-partner__section hide-mobile">
 							<span class="open-trusted-cloud-logo"><i class="fas fa-cloud fa-flip-horizontal"></i> Open Trusted Cloud<sup>tm</sup></span>
@@ -111,7 +111,8 @@
     name: 'SinglePartner',
     data () {
       return {
-        partner: null
+        partner: null,
+        partnerLogo: ''
       }
     },
     computed: {
@@ -125,6 +126,7 @@
 	  if (!this.partner) {
 	    this.$router.push({name: 'home'})
 	  }
+      this.partnerLogo = window.urlImg + this.partner.logo
     }
   }
 </script>
