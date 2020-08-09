@@ -75,7 +75,7 @@ class LocatorController extends AbstractController
             [
                 'id'           => 4,
                 'title'         => '#Name Solution',
-                'certification_level' => ['label' => 'cert 1', 'id' => 1],
+                'certification_level' => ['label' => 'cert 2', 'id' => 2],
                 'availability' => '#country_partner',
                 'url'          => 'https://www.google.com',
                 'logo'         => '/400x150/FFFFFF/CCCCCC/?text=Partner+logo',
