@@ -48,7 +48,7 @@
 
 #locator{
   overflow-x: hidden;
-  height: 100vh;
+  min-height: 100vh;
 }
 .fade-enter, .fade-leave-to{
   opacity: 0;

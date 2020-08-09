@@ -29,7 +29,7 @@ class LocatorController extends AbstractController
         $partners = [
             [
                 'id'           => 1,
-                'title'         => '#Name Solution',
+                'title'         => 'Lorem',
                 'certification_level' => ['label' => 'cert 1', 'id' => 1],
                 'availability' => '#country_partner',
                 'url'          => 'https://www.google.com',
@@ -44,7 +44,7 @@ class LocatorController extends AbstractController
             ],
             [
                 'id'           => 2,
-                'title'         => '#Name Solution',
+                'title'         => 'Ipsum',
                 'certification_level' => ['label' => 'cert 2', 'id' => 2],
                 'availability' => '#country_partner',
                 'url'          => 'https://www.google.com',
@@ -59,7 +59,7 @@ class LocatorController extends AbstractController
             ],
             [
                 'id'           => 3,
-                'title'         => '#Name Solution',
+                'title'         => 'Dolor',
                 'certification_level' => ['label' => 'cert 3', 'id' => 3],
                 'availability' => '#country_partner',
                 'url'          => 'https://www.google.com',
@@ -74,7 +74,7 @@ class LocatorController extends AbstractController
             ],
             [
                 'id'           => 4,
-                'title'         => '#Name Solution',
+                'title'         => 'Amet',
                 'certification_level' => ['label' => 'cert 2', 'id' => 2],
                 'availability' => '#country_partner',
                 'url'          => 'https://www.google.com',
@@ -89,7 +89,7 @@ class LocatorController extends AbstractController
             ],
             [
                 'id'           => 5,
-                'title'         => '#Name Solution',
+                'title'         => 'Consectetur',
                 'certification_level' => ['label' => 'cert 2', 'id' => 2],
                 'availability' => '#country_partner',
                 'url'          => 'https://www.google.com',
@@ -102,6 +102,69 @@ class LocatorController extends AbstractController
                 ],
                 'country_partner' => ['id' => 5, 'label' => 'Italie']
             ],
+            [
+                'id'           => 6,
+                'title'         => 'Ipsum',
+                'certification_level' => ['label' => 'cert 2', 'id' => 2],
+                'availability' => '#country_partner',
+                'url'          => 'https://www.google.com',
+                'logo'         => '/400x150/FFFFFF/CCCCCC/?text=Partner+logo',
+                'description'  => '2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla.',
+                'summary_descrip'      => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla. Phasellus suscipit nunc accumsan rutrum finibus. Phasellus neque leo, ultrices vel luctus vitae, tempor ac mauris. Fusce a vulputate mauris.',
+                'partnerTags' => [
+                    ['id' => 2, 'name' => 'Category 2'],
+                    ['id' => 3, 'name' => 'Category 3'],
+                ],
+                'country_partner' => ['id' => 3, 'label' => 'Allemagne'],
+            ],
+            [
+                'id'           => 7,
+                'title'         => 'Dolor',
+                'certification_level' => ['label' => 'cert 3', 'id' => 3],
+                'availability' => '#country_partner',
+                'url'          => 'https://www.google.com',
+                'logo'         => '/400x150/FFFFFF/CCCCCC/?text=Partner+logo',
+                'description'  => '3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla.',
+                'summary_descrip'      => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla. Phasellus suscipit nunc accumsan rutrum finibus. Phasellus neque leo, ultrices vel luctus vitae, tempor ac mauris. Fusce a vulputate mauris.',
+                'partnerTags' => [
+                    ['id' => 3, 'name' => 'Category 3'],
+                    ['id' => 4, 'name' => 'Category 4'],
+                ],
+                'country_partner' => ['id' => 4, 'label' => 'Belgique'],
+            ],
+            [
+                'id'           => 8,
+                'title'         => 'Amet',
+                'certification_level' => ['label' => 'cert 2', 'id' => 2],
+                'availability' => '#country_partner',
+                'url'          => 'https://www.google.com',
+                'logo'         => '/400x150/FFFFFF/CCCCCC/?text=Partner+logo',
+                'description'  => '4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla.',
+                'summary_descrip'      => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla. Phasellus suscipit nunc accumsan rutrum finibus. Phasellus neque leo, ultrices vel luctus vitae, tempor ac mauris. Fusce a vulputate mauris.',
+                'partnerTags' => [
+                    ['id' => 4, 'name' => 'Category 4'],
+                    ['id' => 5, 'name' => 'Category 5'],
+                ],
+                'country_partner' => ['id' => 1, 'label' => 'France'],
+            ],
+            [
+                'id'           => 9,
+                'title'         => 'Consectetur',
+                'certification_level' => ['label' => 'cert 2', 'id' => 2],
+                'availability' => '#country_partner',
+                'url'          => 'https://www.google.com',
+                'logo'         => '/400x150/FFFFFF/CCCCCC/?text=Partner+logo',
+                'description'  => '5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla.',
+                'summary_descrip'      => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla. Phasellus suscipit nunc accumsan rutrum finibus. Phasellus neque leo, ultrices vel luctus vitae, tempor ac mauris. Fusce a vulputate mauris.',
+                'partnerTags' => [
+                    ['id' => 2, 'name' => 'Category 2'],
+                    ['id' => 4, 'name' => 'Category 4'],
+                ],
+                'country_partner' => ['id' => 5, 'label' => 'Italie']
+            ],
+
+
+
         ];
 
         return new JsonResponse($partners);

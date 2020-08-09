@@ -99,4 +99,37 @@ export default {
       state.filters.countries.splice(isPresent, 1)
     }
   },
+  REORDER_PARTNER_BY: (state, newOrder) => {
+    console.log(newOrder)
+    switch (newOrder) {
+      case 'alphaAsc':
+        state.filteredPartners.sort((a, b) => {
+          const titleA = a.title.toLowerCase()
+          const titleB = b.title.toLowerCase()
+          if (titleA < titleB) {
+            return -1
+          }
+          if (titleA > titleB) {
+            return 1
+          }
+          return 0
+        })
+        break;
+      case 'alphaDesc':
+        state.filteredPartners.sort((a, b) => {
+          const titleA = a.title.toLowerCase()
+          const titleB = b.title.toLowerCase()
+          if (titleA < titleB) {
+            return 1
+          }
+          if (titleA > titleB) {
+            return -1
+          }
+          return 0
+        })
+        break;
+      default:
+        break;
+    }
+  }
 }

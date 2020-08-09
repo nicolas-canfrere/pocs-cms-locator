@@ -58,4 +58,7 @@ export default {
     commit('REMOVE_COUNTRY_TO_FILTERS', country)
     dispatch('filterPartner')
   },
+  reorderPartnersBy ({commit, dispatch}, newOrder) {
+    commit('REORDER_PARTNER_BY', newOrder)
+  }
 }
