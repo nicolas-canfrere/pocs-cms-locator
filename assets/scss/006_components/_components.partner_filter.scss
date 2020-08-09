@@ -58,10 +58,25 @@
       font-size: 1.2rem;
       font-weight: 700;
       color: $ovh-blue-003;
+      cursor: pointer;
+      position: relative;
+      margin-bottom: .5rem;
+      padding-right: 20px;
+
+      &.section-open{
+        .section__title_arrow{
+          transform: rotateZ(-180deg);
+        }
+      }
+
+      .section__title_arrow{
+        position: absolute;
+        transition: transform .3s ease-in-out;
+        right: 1px;
+        top: 5px;
+      }
     }
-    .section__content{
-      margin-top: .5rem;
-    }
+    .section__content{}
   }
 }
 

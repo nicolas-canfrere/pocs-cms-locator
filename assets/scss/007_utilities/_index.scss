@@ -58,3 +58,8 @@
 .fade-enter-active, .fade-leave-active{
   transition: all .3s ease;
 }
+
+.expand-filter-section-enter-active, .expand-filter-section-leave-active{
+  transition: height .3s ease-in-out;
+  overflow: hidden;
+}
