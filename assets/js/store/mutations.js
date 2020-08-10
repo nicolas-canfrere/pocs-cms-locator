@@ -36,8 +36,15 @@ export default {
       })
     }
     if (filters.countries.length) {
+      let list
+      if (tmp.length > 0) {
+        list = tmp
+        tmp = []
+      } else {
+        list = state.filteredPartners.map(a => a)
+      }
       filters.countries.forEach(country => {
-        state.filteredPartners.forEach(partner => {
+        list.forEach(partner => {
           if (
             partner.hasOwnProperty('country_partner') &&
             null !== partner.country_partner &&
