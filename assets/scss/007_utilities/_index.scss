@@ -31,6 +31,13 @@
   }
 }
 
+.hide-mobile-only {
+  display: none;
+  @media screen and (min-width: $partnerMobileBC) {
+    display: block;
+  }
+}
+
 .overlay {
   position: fixed;
   top: 0;

@@ -18,7 +18,7 @@
 					</select>
 				</div>
 				<div class="spacer"></div>
-				<div>
+				<div class="hide-mobile-only">
 					<label>Résultats par page&nbsp;:&nbsp;</label>
 					<select>
 						<option value="6">6</option>
