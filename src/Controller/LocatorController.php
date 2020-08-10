@@ -183,11 +183,11 @@ class LocatorController extends AbstractController
         }
 
         $categories = [
-            ['id' => 1, 'name' => 'Category 1', 'selected' => false],
-            ['id' => 2, 'name' => 'Category 2', 'selected' => false],
-            ['id' => 3, 'name' => 'Category 3', 'selected' => false],
-            ['id' => 4, 'name' => 'Category 4', 'selected' => false],
-            ['id' => 5, 'name' => 'Category 5', 'selected' => false],
+            ['id' => 1, 'name' => 'Category 1'],
+            ['id' => 2, 'name' => 'Category 2'],
+            ['id' => 3, 'name' => 'Category 3'],
+            ['id' => 4, 'name' => 'Category 4'],
+            ['id' => 5, 'name' => 'Category 5'],
         ];
 
         return new JsonResponse($categories);

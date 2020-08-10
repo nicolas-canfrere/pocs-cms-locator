@@ -60,5 +60,9 @@ export default {
   },
   reorderPartnersBy ({ commit, dispatch }, newOrder) {
     commit('REORDER_PARTNER_BY', newOrder)
+  },
+  searchPartner ({ commit }, query) {
+    commit('CANCEL_FILTERS')
+    commit('SEARCH_PARTNERS', query)
   }
 }

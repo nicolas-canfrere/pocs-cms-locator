@@ -7,7 +7,10 @@ export default {
     state.controls.initPartners = true
   },
   INIT_CATEGORIES: (state, categories) => {
-    state.categories = categories
+    state.categories = categories.map(cat => {
+      cat.selected = false
+      return cat
+    })
   },
   INIT_COUNTRIES: (state, countries) => {
     state.countries = countries
@@ -151,5 +154,20 @@ export default {
       default:
         break
     }
+  },
+  CANCEL_FILTERS: (state) => {
+    state.filters.categories = []
+    state.filters.countries = []
+    state.categories.forEach(cat => {
+      cat.selected = false
+    })
+    state.filteredPartners = state.partners.map(a => a)
+  },
+  SEARCH_PARTNERS: (state, query) => {
+    let searchResult
+    searchResult = state.filteredPartners.filter(partner => {
+      return partner.title.toLowerCase().includes(query.toLowerCase())
+    })
+    state.filteredPartners = searchResult.map(a => a)
   }
 }

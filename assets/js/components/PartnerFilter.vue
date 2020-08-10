@@ -80,7 +80,7 @@
 			>
 				<div class="section__content" v-show="searchSectionOpen">
 					<div class="search">
-						<input type="text">
+						<input type="text" @input="search">
 						<div class="icon"><i class="fas fa-search"></i></div>
 					</div>
 				</div>
@@ -113,6 +113,10 @@
       ...mapState(['filters'])
     },
     methods: {
+      search (event) {
+        const query = event.target.value
+        this.$store.dispatch('searchPartner', query)
+	  },
       accordionEnter (element) {
         element.style.height = 'auto'
         const height = getComputedStyle(element).height
