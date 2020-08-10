@@ -9,26 +9,29 @@
 					v-for="(partner,index) in partners"
 					:key="partner.id"
 					:partner="partner"
-					:isfirst="index===0"
+					:isfirst="index===0 && currentPage === 1"
 			/>
 		</div>
+		<pagination></pagination>
 	</div>
 </template>
 
 <script>
   import Partner from './Partner'
+  import Pagination from './Pagination'
   import { mapGetters } from 'vuex'
 
   export default {
     name: 'PartnerList',
-    components: { Partner },
+    components: { Partner, Pagination },
     data () {
       return {}
     },
     computed: {
       ...mapGetters({
         controlPartnersInitialized: 'controlPartnersInitialized',
-        partners: 'filteredPartners'
+        partners: 'filteredPartners',
+        currentPage: 'getCurrentPage'
       })
     }
   }

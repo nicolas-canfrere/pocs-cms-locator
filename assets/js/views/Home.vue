@@ -20,11 +20,8 @@
 				<div class="spacer"></div>
 				<div class="hide-mobile-only">
 					<label>Résultats par page&nbsp;:&nbsp;</label>
-					<select>
-						<option value="6">6</option>
-						<option value="12">12</option>
-						<option value="24">24</option>
-						<option value="36">36</option>
+					<select @change="changeResultsByPage">
+						<option v-for="result in resultsByPageConfig" :value="result">{{result}}</option>
 					</select>
 				</div>
 			</div>
@@ -36,6 +33,7 @@
 <script>
   import PartnerList from '../components/PartnerList'
   import PartnerFilter from '../components/PartnerFilter'
+  import { mapGetters } from 'vuex'
 
   export default {
     name: 'Home',
@@ -45,7 +43,15 @@
         openFilterMenu: false
       }
     },
+	computed: {
+      ...mapGetters({
+		resultsByPageConfig: 'getResultsByPageConfig'
+	  })
+	},
     methods: {
+      changeResultsByPage (event) {
+        this.$store.dispatch('changeResultsByPage', event.target.value)
+	  },
       orderBy (event) {
         this.$store.dispatch('reorderPartnersBy', event.target.value)
       }

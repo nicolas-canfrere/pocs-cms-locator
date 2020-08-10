@@ -27,8 +27,9 @@ export default {
       return Promise.resolve()
     })
   },
-  filterPartner: ({ commit }) => {
+  filterPartner: ({ commit, dispatch }) => {
     commit('FILTER_PARTNERS')
+    dispatch('reIntiPagination')
   },
   selectAllCategoriesToFilters: ({ commit, dispatch }) => {
     commit('SELECT_ALL_CATEGORIES_TO_FILTERS')
@@ -61,8 +62,30 @@ export default {
   reorderPartnersBy ({ commit, dispatch }, newOrder) {
     commit('REORDER_PARTNER_BY', newOrder)
   },
-  searchPartner ({ commit }, query) {
+  searchPartner ({ commit, dispatch }, query) {
     commit('CANCEL_FILTERS')
     commit('SEARCH_PARTNERS', query)
+    dispatch('reIntiPagination')
+  },
+  changeResultsByPage: ({ commit, dispatch }, number) => {
+    commit('CHANGE_RESULTS_BY_PAGE', number)
+  },
+  paginationPreviousPage: ({ commit, dispatch }, previous) => {
+    commit('PAGINATION_PREVIOUS_PAGE', previous)
+    dispatch('paginate', previous)
+  },
+  paginationNextPage: ({ commit, dispatch }, next) => {
+    commit('PAGINATION_NEXT_PAGE', next)
+    dispatch('paginate', next)
+  },
+  paginationGoToPage: ({ commit, dispatch }, page) => {
+    commit('PAGINATION_GO_TO', page)
+    dispatch('paginate', page)
+  },
+  reIntiPagination: ({commit}) => {
+    commit('REINIT_PAGINATION')
+  },
+  paginate: ({ commit }, page) => {
+    commit('PAGINATE', page)
   }
 }
