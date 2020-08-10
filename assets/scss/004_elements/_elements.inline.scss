@@ -1,7 +1,10 @@
-a{
-  text-decoration: none;
-  color: $ovh-blue-003;
-  &:hover{
-    text-decoration: underline;
+#locator{
+  a{
+    text-decoration: none;
+    color: $ovh-blue-003;
+    &:hover{
+      text-decoration: underline;
+    }
   }
+
 }

@@ -29,11 +29,9 @@
 						</div>
 					</div>
 					<div class="single-partner__body">
+						<div class="single-partner__section" v-html="partner.summary_descrip"></div>
 						<div class="single-partner__section">
-							{{partner.summary_descrip}}
-						</div>
-						<div class="single-partner__section">
-							Disponibilité: <span class="text-bold">{{partner.country_partner.label}}</span>
+							Disponibilité: <span class="text-bold">{{partner.country_partner}}</span>
 						</div>
 						<div class="single-partner__section hide-mobile">
 							<span class="open-trusted-cloud-logo"><i class="fas fa-cloud fa-flip-horizontal"></i> Open Trusted Cloud<sup>tm</sup></span>
@@ -86,9 +84,7 @@
 						</div>
 						<div class="col-4 p-8">
 							<h3>Qui sommes nous ?</h3>
-							<p>
-								{{partner.description}}
-							</p>
+							<p v-html="partner.description"></p>
 							<p>
 								<a :href="partner.url" class="outlined-btn">Lien vers l'éditeur</a>
 							</p>

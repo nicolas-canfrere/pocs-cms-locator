@@ -6,6 +6,11 @@
     margin-left: auto;
   }
 
+  label.results-management__label{
+    font-size: $baseFontSize;
+    color: $baseFontColor!important;
+  }
+
   select {
     border: 1px solid $formBorderColor;
     background-color: #fff;

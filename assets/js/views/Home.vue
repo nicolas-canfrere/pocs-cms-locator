@@ -10,7 +10,7 @@
 		<div class="col-4">
 			<div class="results-management">
 				<div>
-					<label>Trier par&nbsp;:&nbsp;</label>
+					<label class="results-management__label">Trier par&nbsp;:&nbsp;</label>
 					<select @change="orderBy">
 						<option value="alphaAsc">A - Z</option>
 						<option value="alphaDesc">Z - A</option>
@@ -19,7 +19,7 @@
 				</div>
 				<div class="spacer"></div>
 				<div class="hide-mobile-only">
-					<label>Résultats par page&nbsp;:&nbsp;</label>
+					<label class="results-management__label">Résultats par page&nbsp;:&nbsp;</label>
 					<select @change="changeResultsByPage">
 						<option v-for="result in resultsByPageConfig" :value="result">{{result}}</option>
 					</select>

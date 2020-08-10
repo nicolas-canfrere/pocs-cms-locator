@@ -1,41 +1,44 @@
-h1,h2,h3,h4,h5,h6{
-  font-weight: 500;
-  color: $ovh-blue-001;
-}
+#locator {
+  h1,h2,h3,h4,h5,h6{
+    font-weight: 500;
+    color: $ovh-blue-001;
+  }
 
-h1{
-  font-size: fontSize(42px);
-  line-height: $defaultLineHeight;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-h2{
-  font-size: fontSize(36px);
-  line-height: $defaultLineHeight;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-h3{
-  font-size: fontSize(30px);
-  line-height: $defaultLineHeight;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-h4{
-  font-size: fontSize(24px);
-  line-height: $defaultLineHeight;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-h5{
-  font-size: fontSize(16px);
-  line-height: $defaultLineHeight;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-h6{
-  font-size: fontSize(14px);
-  line-height: $defaultLineHeight;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  h1{
+    font-size: fontSize(42px);
+    line-height: $defaultLineHeight;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  h2{
+    font-size: fontSize(36px);
+    line-height: $defaultLineHeight;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  h3{
+    font-size: fontSize(30px);
+    line-height: $defaultLineHeight;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  h4{
+    font-size: fontSize(24px);
+    line-height: $defaultLineHeight;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  h5{
+    font-size: fontSize(16px);
+    line-height: $defaultLineHeight;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  h6{
+    font-size: fontSize(14px);
+    line-height: $defaultLineHeight;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
 }

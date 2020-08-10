@@ -2,11 +2,7 @@ import axios from 'axios'
 
 axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
 
-const endPoints = {
-  partnerList: '/partners',
-  categoryList: '/categories',
-  countryList: '/countries'
-}
+const endPoints = window.apiEndPoints
 
 export default {
   initCategories: ({ commit }) => {

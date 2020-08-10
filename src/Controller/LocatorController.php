@@ -36,12 +36,13 @@ class LocatorController extends AbstractController
                 'logo'                => '/400x150/FFFFFF/CCCCCC/?text=Partner+logo',
                 'description'         => '1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla.',
                 'summary_descrip'     => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla. Phasellus suscipit nunc accumsan rutrum finibus. Phasellus neque leo, ultrices vel luctus vitae, tempor ac mauris. Fusce a vulputate mauris.',
-                'partnerTags'         => [
+                'partner_tags'         => [
                     ['id' => 1, 'name' => 'Category 1'],
                     ['id' => 2, 'name' => 'Category 2'],
                 ],
-                'country_partner'     => ['id' => 1, 'label' => 'France'],
-                'createdAt' => (new \DateTime('2019-01-01 00:00:00'))->format('c'),
+                'country_partner'     => 'France',
+                'country_id'     => 1,
+                'created' => (new \DateTime('2019-01-01 00:00:00'))->format('c'),
             ],
             [
                 'id'                  => 2,
@@ -52,12 +53,13 @@ class LocatorController extends AbstractController
                 'logo'                => '/400x150/FFFFFF/CCCCCC/?text=Partner+logo',
                 'description'         => '2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla.',
                 'summary_descrip'     => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla. Phasellus suscipit nunc accumsan rutrum finibus. Phasellus neque leo, ultrices vel luctus vitae, tempor ac mauris. Fusce a vulputate mauris.',
-                'partnerTags'         => [
+                'partner_tags'         => [
                     ['id' => 2, 'name' => 'Category 2'],
                     ['id' => 3, 'name' => 'Category 3'],
                 ],
-                'country_partner'     => ['id' => 3, 'label' => 'Allemagne'],
-                'createdAt' => (new \DateTime('2019-02-01 00:00:00'))->format('c'),
+                'country_partner'     => 'Allemagne',
+                'country_id'     => 3,
+                'created' => (new \DateTime('2019-02-01 00:00:00'))->format('c'),
             ],
             [
                 'id'                  => 3,
@@ -68,12 +70,13 @@ class LocatorController extends AbstractController
                 'logo'                => '/400x150/FFFFFF/CCCCCC/?text=Partner+logo',
                 'description'         => '3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla.',
                 'summary_descrip'     => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla. Phasellus suscipit nunc accumsan rutrum finibus. Phasellus neque leo, ultrices vel luctus vitae, tempor ac mauris. Fusce a vulputate mauris.',
-                'partnerTags'         => [
+                'partner_tags'         => [
                     ['id' => 3, 'name' => 'Category 3'],
                     ['id' => 4, 'name' => 'Category 4'],
                 ],
-                'country_partner'     => ['id' => 4, 'label' => 'Belgique'],
-                'createdAt' => (new \DateTime('2019-03-01 00:00:00'))->format('c'),
+                'country_partner'     => 'Belgique',
+                'country_id'     => 4,
+                'created' => (new \DateTime('2019-03-01 00:00:00'))->format('c'),
             ],
             [
                 'id'                  => 4,
@@ -84,12 +87,13 @@ class LocatorController extends AbstractController
                 'logo'                => '/400x150/FFFFFF/CCCCCC/?text=Partner+logo',
                 'description'         => '4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla.',
                 'summary_descrip'     => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla. Phasellus suscipit nunc accumsan rutrum finibus. Phasellus neque leo, ultrices vel luctus vitae, tempor ac mauris. Fusce a vulputate mauris.',
-                'partnerTags'         => [
+                'partner_tags'         => [
                     ['id' => 4, 'name' => 'Category 4'],
                     ['id' => 5, 'name' => 'Category 5'],
                 ],
-                'country_partner'     => ['id' => 1, 'label' => 'France'],
-                'createdAt' => (new \DateTime('2019-04-01 00:00:00'))->format('c'),
+                'country_partner'     => 'France',
+                'country_id'     => 1,
+                'created' => (new \DateTime('2019-04-01 00:00:00'))->format('c'),
             ],
             [
                 'id'                  => 5,
@@ -100,12 +104,13 @@ class LocatorController extends AbstractController
                 'logo'                => '/400x150/FFFFFF/CCCCCC/?text=Partner+logo',
                 'description'         => '5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla.',
                 'summary_descrip'     => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla. Phasellus suscipit nunc accumsan rutrum finibus. Phasellus neque leo, ultrices vel luctus vitae, tempor ac mauris. Fusce a vulputate mauris.',
-                'partnerTags'         => [
+                'partner_tags'         => [
                     ['id' => 2, 'name' => 'Category 2'],
                     ['id' => 4, 'name' => 'Category 4'],
                 ],
-                'country_partner'     => ['id' => 5, 'label' => 'Italie'],
-                'createdAt' => (new \DateTime('2019-05-01 00:00:00'))->format('c'),
+                'country_partner'     => 'Italie',
+                'country_id'     => 5,
+                'created' => (new \DateTime('2019-05-01 00:00:00'))->format('c'),
             ],
             [
                 'id'                  => 6,
@@ -116,12 +121,13 @@ class LocatorController extends AbstractController
                 'logo'                => '/400x150/FFFFFF/CCCCCC/?text=Partner+logo',
                 'description'         => '2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla.',
                 'summary_descrip'     => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla. Phasellus suscipit nunc accumsan rutrum finibus. Phasellus neque leo, ultrices vel luctus vitae, tempor ac mauris. Fusce a vulputate mauris.',
-                'partnerTags'         => [
+                'partner_tags'         => [
                     ['id' => 2, 'name' => 'Category 2'],
                     ['id' => 3, 'name' => 'Category 3'],
                 ],
-                'country_partner'     => ['id' => 3, 'label' => 'Allemagne'],
-                'createdAt' => (new \DateTime('2020-01-01 00:00:00'))->format('c'),
+                'country_partner'     => 'Allemagne',
+                'country_id'     => 3,
+                'created' => (new \DateTime('2020-01-01 00:00:00'))->format('c'),
             ],
             [
                 'id'                  => 7,
@@ -132,12 +138,13 @@ class LocatorController extends AbstractController
                 'logo'                => '/400x150/FFFFFF/CCCCCC/?text=Partner+logo',
                 'description'         => '3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla.',
                 'summary_descrip'     => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla. Phasellus suscipit nunc accumsan rutrum finibus. Phasellus neque leo, ultrices vel luctus vitae, tempor ac mauris. Fusce a vulputate mauris.',
-                'partnerTags'         => [
+                'partner_tags'         => [
                     ['id' => 3, 'name' => 'Category 3'],
                     ['id' => 4, 'name' => 'Category 4'],
                 ],
-                'country_partner'     => ['id' => 4, 'label' => 'Belgique'],
-                'createdAt' => (new \DateTime('2020-02-01 00:00:00'))->format('c'),
+                'country_partner'     => 'Belgique',
+                'country_id'     => 4,
+                'created' => (new \DateTime('2020-02-01 00:00:00'))->format('c'),
             ],
             [
                 'id'                  => 8,
@@ -148,12 +155,13 @@ class LocatorController extends AbstractController
                 'logo'                => '/400x150/FFFFFF/CCCCCC/?text=Partner+logo',
                 'description'         => '4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla.',
                 'summary_descrip'     => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla. Phasellus suscipit nunc accumsan rutrum finibus. Phasellus neque leo, ultrices vel luctus vitae, tempor ac mauris. Fusce a vulputate mauris.',
-                'partnerTags'         => [
+                'partner_tags'         => [
                     ['id' => 4, 'name' => 'Category 4'],
                     ['id' => 5, 'name' => 'Category 5'],
                 ],
-                'country_partner'     => ['id' => 1, 'label' => 'France'],
-                'createdAt' => (new \DateTime('2020-07-01 00:00:00'))->format('c'),
+                'country_partner'     => 'France',
+                'country_id'     => 1,
+                'created' => (new \DateTime('2020-07-01 00:00:00'))->format('c'),
             ],
             [
                 'id'                  => 9,
@@ -164,12 +172,13 @@ class LocatorController extends AbstractController
                 'logo'                => '/400x150/FFFFFF/CCCCCC/?text=Partner+logo',
                 'description'         => '5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla.',
                 'summary_descrip'     => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue bibendum fringilla. Phasellus suscipit nunc accumsan rutrum finibus. Phasellus neque leo, ultrices vel luctus vitae, tempor ac mauris. Fusce a vulputate mauris.',
-                'partnerTags'         => [
+                'partner_tags'         => [
                     ['id' => 2, 'name' => 'Category 2'],
                     ['id' => 4, 'name' => 'Category 4'],
                 ],
-                'country_partner'     => ['id' => 5, 'label' => 'Italie'],
-                'createdAt' => (new \DateTime('2020-08-01 00:00:00'))->format('c'),
+                'country_partner'     => 'Italie',
+                'country_id'     => 5,
+                'created' => (new \DateTime('2020-08-01 00:00:00'))->format('c'),
             ],
         ];
 

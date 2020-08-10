@@ -7,6 +7,11 @@
 {% block footscripts %}
     <script>
         window.urlImg = '{{ urlImg }}';
+        window.apiEndPoints = {
+          partnerList: '/partners',
+          categoryList: '/categories',
+          countryList: '/countries'
+        }
     </script>
     {{ parent() }}
 {% endblock %}

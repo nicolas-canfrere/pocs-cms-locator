@@ -19,10 +19,10 @@ const filterPartners = (state) => {
     filters.categories.forEach(category => {
       state.filteredPartners.forEach(partner => {
         if (
-          partner.hasOwnProperty('partnerTags') &&
-          partner.partnerTags.length > 0
+          partner.hasOwnProperty('partner_tags') &&
+          partner.partner_tags.length > 0
         ) {
-          partner.partnerTags.forEach(tag => {
+          partner.partner_tags.forEach(tag => {
             if (tag.id === category.id) {
               tmp.push(partner)
             }
@@ -42,10 +42,9 @@ const filterPartners = (state) => {
     filters.countries.forEach(country => {
       list.forEach(partner => {
         if (
-          partner.hasOwnProperty('country_partner') &&
-          null !== partner.country_partner &&
-          partner.country_partner.hasOwnProperty('id') &&
-          partner.country_partner.id === country.id
+          partner.hasOwnProperty('country_id') &&
+          null !== partner.country_id &&
+          partner.country_id === country.id
         ) {
           tmp.push(partner)
         }
@@ -91,8 +90,8 @@ const orderByAlphaDesc = (array) => {
 
 const orderByCreatedAtDesc = (array) => {
   array.sort((a, b) => {
-    const dateA = new Date(a.createdAt)
-    const dateB = new Date(b.createdAt)
+    const dateA = new Date(a.created)
+    const dateB = new Date(b.created)
     if (dateA < dateB) {
       return 1
     }

@@ -1,4 +1,13 @@
+html{
+  font-size: $baseSize;
+}
 body{
+  font-family: $defaultFontFamily;
+  line-height: $defaultLineHeight;
+  font-size: fontSize($baseSize);
+  color: $baseFontColor;
+}
+#locator{
   font-family: $defaultFontFamily;
   line-height: $defaultLineHeight;
   font-size: fontSize($baseSize);
