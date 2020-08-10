@@ -6,7 +6,7 @@
 			</div>
 			<div class="partner__body">
 				<div class="partner__title">
-					{{partner.title}} - {{partner.certification_level.label}}
+					{{partner.title}} - {{partner.certification_level.label}} <span class="badge" v-if="isNew">New</span>
 				</div>
 				<div class="partner__content">
 					<div class="partner__excerpt">
@@ -34,6 +34,14 @@
       return {
         partnerLogo: ''
 	  }
+	},
+	computed: {
+      isNew: function () {
+        const limit = new Date()
+		limit.setMonth(limit.getMonth() - 1)
+		const createdAt = new Date(this.partner.createdAt)
+		return createdAt > limit
+      }
 	},
 	created () {
       this.partnerLogo = window.urlImg + this.partner.logo

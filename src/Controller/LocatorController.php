@@ -41,6 +41,7 @@ class LocatorController extends AbstractController
                     ['id' => 2, 'name' => 'Category 2'],
                 ],
                 'country_partner'     => ['id' => 1, 'label' => 'France'],
+                'createdAt' => (new \DateTime('2019-01-01 00:00:00'))->format('c'),
             ],
             [
                 'id'                  => 2,
@@ -56,6 +57,7 @@ class LocatorController extends AbstractController
                     ['id' => 3, 'name' => 'Category 3'],
                 ],
                 'country_partner'     => ['id' => 3, 'label' => 'Allemagne'],
+                'createdAt' => (new \DateTime('2019-02-01 00:00:00'))->format('c'),
             ],
             [
                 'id'                  => 3,
@@ -71,6 +73,7 @@ class LocatorController extends AbstractController
                     ['id' => 4, 'name' => 'Category 4'],
                 ],
                 'country_partner'     => ['id' => 4, 'label' => 'Belgique'],
+                'createdAt' => (new \DateTime('2019-03-01 00:00:00'))->format('c'),
             ],
             [
                 'id'                  => 4,
@@ -86,6 +89,7 @@ class LocatorController extends AbstractController
                     ['id' => 5, 'name' => 'Category 5'],
                 ],
                 'country_partner'     => ['id' => 1, 'label' => 'France'],
+                'createdAt' => (new \DateTime('2019-04-01 00:00:00'))->format('c'),
             ],
             [
                 'id'                  => 5,
@@ -101,6 +105,7 @@ class LocatorController extends AbstractController
                     ['id' => 4, 'name' => 'Category 4'],
                 ],
                 'country_partner'     => ['id' => 5, 'label' => 'Italie'],
+                'createdAt' => (new \DateTime('2019-05-01 00:00:00'))->format('c'),
             ],
             [
                 'id'                  => 6,
@@ -116,6 +121,7 @@ class LocatorController extends AbstractController
                     ['id' => 3, 'name' => 'Category 3'],
                 ],
                 'country_partner'     => ['id' => 3, 'label' => 'Allemagne'],
+                'createdAt' => (new \DateTime('2020-01-01 00:00:00'))->format('c'),
             ],
             [
                 'id'                  => 7,
@@ -131,6 +137,7 @@ class LocatorController extends AbstractController
                     ['id' => 4, 'name' => 'Category 4'],
                 ],
                 'country_partner'     => ['id' => 4, 'label' => 'Belgique'],
+                'createdAt' => (new \DateTime('2020-02-01 00:00:00'))->format('c'),
             ],
             [
                 'id'                  => 8,
@@ -146,6 +153,7 @@ class LocatorController extends AbstractController
                     ['id' => 5, 'name' => 'Category 5'],
                 ],
                 'country_partner'     => ['id' => 1, 'label' => 'France'],
+                'createdAt' => (new \DateTime('2020-07-01 00:00:00'))->format('c'),
             ],
             [
                 'id'                  => 9,
@@ -161,6 +169,7 @@ class LocatorController extends AbstractController
                     ['id' => 4, 'name' => 'Category 4'],
                 ],
                 'country_partner'     => ['id' => 5, 'label' => 'Italie'],
+                'createdAt' => (new \DateTime('2020-08-01 00:00:00'))->format('c'),
             ],
         ];
 

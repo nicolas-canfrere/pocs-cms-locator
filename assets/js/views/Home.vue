@@ -14,6 +14,7 @@
 					<select @change="orderBy">
 						<option value="alphaAsc">A - Z</option>
 						<option value="alphaDesc">Z - A</option>
+						<option value="lastAdded">Derniers ajouts</option>
 					</select>
 				</div>
 				<div class="spacer"></div>
