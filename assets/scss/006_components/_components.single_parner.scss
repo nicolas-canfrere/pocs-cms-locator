@@ -4,6 +4,7 @@
 .single-partner__logo {
   position: relative;
   display: flex;
+  padding: .5rem;
 
   img {
     display: block;
@@ -28,6 +29,7 @@
 
   .single-partner__header__logo {
     display: none;
+    padding: .5rem;
 
     img {
       display: block;

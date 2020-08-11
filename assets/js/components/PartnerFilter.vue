@@ -16,7 +16,7 @@
 					<ul class="unstyled p-0 mb-2">
 						<li v-for="(category, index) in categories" :key="category.id" class="mb-2">
 							<div class="checkbox">
-								<label>
+								<label class="">
 									<input type="checkbox" v-model="category.selected"
 										   @change="toggleFilterCategory(category)">
 									<span class="checkbox__square">

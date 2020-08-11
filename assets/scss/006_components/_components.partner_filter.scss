@@ -115,6 +115,7 @@
     label {
       display: inline-flex;
       cursor: pointer;
+      padding: 0;
 
       &:hover {
         .checkbox__square {
