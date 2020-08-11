@@ -76,11 +76,15 @@
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   padding: .5rem;
+  height: 200px;
+  display: flex;
+  align-items: center;
 
   img {
-    display: block;
+    //display: block;
     width: 100%;
-    height: auto;
+    //height: auto;
+    object-fit: cover;
   }
 }
 

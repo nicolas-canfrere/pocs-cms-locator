@@ -9,7 +9,7 @@
 					{{partner.title}} - {{partner.certification_level.label}} <span class="badge" v-if="isNew">New</span>
 				</div>
 				<div class="partner__content">
-					<div class="partner__excerpt" v-html="partner.summary_descrip"></div>
+					<div class="partner__excerpt" v-html="shortText"></div>
 					<div class="partner__infos">
 						Disponibilité: <span class="text-bold">{{partner.country_partner}}</span>
 					</div>
@@ -34,6 +34,17 @@
 	  }
 	},
 	computed: {
+      shortText: function() {
+        const limit = 150
+        const excerptLength = this.partner.summary_descrip.length
+        if (excerptLength < limit) {
+          let extraCharsLength = limit - excerptLength
+          let extraChar = ' '
+          return this.partner.summary_descrip + '...' + extraChar.repeat(extraCharsLength)
+        } else {
+          return this.partner.summary_descrip.substring(0, limit) + '...'
+        }
+      },
       isNew: function () {
         const limit = new Date()
 		limit.setMonth(limit.getMonth() - 1)

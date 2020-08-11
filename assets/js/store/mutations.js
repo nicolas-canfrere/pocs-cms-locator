@@ -44,7 +44,7 @@ const filterPartners = (state) => {
         if (
           partner.hasOwnProperty('country_id') &&
           null !== partner.country_id &&
-          partner.country_id === country.id
+          parseInt(partner.country_id) === country.id
         ) {
           tmp.push(partner)
         }

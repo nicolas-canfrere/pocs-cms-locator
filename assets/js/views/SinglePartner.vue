@@ -24,7 +24,7 @@
 										class="fas fa-cloud fa-flip-horizontal"></i> Open Trusted Cloud<sup>tm</sup></span>
 							</div>
 							<div class="partner__action">
-								<a :href="partner.url" class="outlined-btn">Découvrir la solution</a>
+								<a :href="partner.url" class="outlined-btn" target="_blank">Découvrir la solution</a>
 							</div>
 						</div>
 					</div>
@@ -86,7 +86,7 @@
 							<h3>Qui sommes nous ?</h3>
 							<p v-html="partner.description"></p>
 							<p>
-								<a :href="partner.url" class="outlined-btn">Lien vers l'éditeur</a>
+								<a :href="partner.url" class="outlined-btn" target="_blank">Lien vers l'éditeur</a>
 							</p>
 						</div>
 					</div>
