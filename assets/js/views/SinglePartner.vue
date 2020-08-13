@@ -29,6 +29,9 @@
 						</div>
 					</div>
 					<div class="single-partner__body">
+						<div class="single-partner__section">
+							<h3>{{partner.punchline}}</h3>
+						</div>
 						<div class="single-partner__section" v-html="partner.summary_descrip"></div>
 						<div class="single-partner__section">
 							Disponibilité: <span class="text-bold">{{partner.country_partner}}</span>
@@ -42,20 +45,14 @@
 			<div class="loc-grid mt-16">
 				<div class="col-4">
 					<h3>Why it's Open Trusted Cloud proof?</h3>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dolor doloremque eaque eos
-						facilis harum impedit inventore iste molestias, optio placeat quam quos, reprehenderit,
-						similique sit vitae voluptas? A adipisci asperiores aspernatur assumenda at consequatur deserunt
-						eum ex expedita explicabo illo iure iusto maxime, minus necessitatibus obcaecati praesentium
-						ratione recusandae?
-					</p>
+					<p v-html="partner.arguments"></p>
 				</div>
 			</div>
 			<div class="loc-grid mt-16">
 				<div class="col">
 					<div class="single__partner__video">
 						<div class="video-resp">
-							<iframe src="https://www.youtube.com/embed/ajjCnRCX19w" frameborder="0"></iframe>
+							<iframe :src="partner.video_link" frameborder="0"></iframe>
 						</div>
 					</div>
 				</div>
@@ -79,8 +76,8 @@
 				<div class="col-1"></div>
 				<div class="col-4">
 					<div class="loc-grid">
-						<div class="col-2 p-8">
-							<img src="https://via.placeholder.com/400x300" class="img-resp">
+						<div class="col-2 p-4 flex-vertical-center">
+							<img :src="partnerLogo" class="img-resp">
 						</div>
 						<div class="col-4 p-8">
 							<h3>Qui sommes nous ?</h3>
