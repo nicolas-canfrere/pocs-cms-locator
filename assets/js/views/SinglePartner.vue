@@ -48,7 +48,7 @@
 					<p v-html="partner.arguments"></p>
 				</div>
 			</div>
-			<div class="loc-grid mt-16">
+			<div class="loc-grid mt-16" v-show="partner.video_link != null">
 				<div class="col">
 					<div class="single__partner__video">
 						<div class="video-resp">
