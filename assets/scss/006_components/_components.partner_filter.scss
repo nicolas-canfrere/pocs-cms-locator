@@ -183,7 +183,7 @@
       border: 1px solid $formBorderColor;
       width: 100%;
       min-height: $formMinHeight;
-      padding: .5rem 40px .5rem 1rem;
+      padding: .5rem 80px .5rem 1rem;
       border-radius: $formBorderRadius;
 
       &:focus {
@@ -193,7 +193,27 @@
       }
     }
 
-    .icon {
+    .search__clear {
+      position: absolute;
+      right: 41px;
+      top: 1px;
+      background-color: transparent;
+      height: 38px;
+      width: 40px;
+      line-height: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $ovh-blue-003;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      &:focus{
+        outline: none;
+      }
+    }
+
+    .search__icon {
       position: absolute;
       right: 1px;
       top: 1px;

@@ -80,8 +80,9 @@
 			>
 				<div class="section__content" v-show="searchSectionOpen">
 					<div class="search">
-						<input type="text" @input="search">
-						<div class="icon"><i class="fas fa-search"></i></div>
+						<input type="text" @input="search" ref="search">
+						<button @click.prevent="clearSearch" class="search__clear" v-show="hasQuery"><i class="fas fa-times"></i></button>
+						<div class="search__icon"><i class="fas fa-search"></i></div>
 					</div>
 				</div>
 			</transition>
@@ -103,6 +104,7 @@
         categorySectionOpen: true,
         countrySectionOpen: true,
         searchSectionOpen: true,
+		hasQuery: false,
       }
     },
     computed: {
@@ -114,8 +116,14 @@
     },
     methods: {
       search (event) {
-        const query = event.target.value
+        const query = event.target.value.trim()
+        this.hasQuery = (typeof query === 'string' && query.length > 0)
         this.$store.dispatch('searchPartner', query)
+	  },
+      clearSearch () {
+        this.hasQuery = false
+        this.$refs.search.value = ''
+        this.$store.dispatch('searchPartner', false)
 	  },
       accordionEnter (element) {
         element.style.height = 'auto'

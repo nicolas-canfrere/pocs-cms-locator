@@ -205,11 +205,15 @@ export default {
     reInitPagination(state)
   },
   SEARCH_PARTNERS: (state, query) => {
-    let searchResult
-    searchResult = state.filteredPartners.filter(partner => {
-      return partner.title.toLowerCase().includes(query.toLowerCase())
-    })
-    state.filteredPartners = searchResult.map(a => a)
+    if(query) {
+      let searchResult
+      searchResult = state.filteredPartners.filter(partner => {
+        return partner.title.toLowerCase().includes(query.toLowerCase())
+      })
+      state.filteredPartners = searchResult.map(a => a)
+    } else {
+      reInitFilteredPartners(state)
+    }
   },
   CHANGE_RESULTS_BY_PAGE: (state, number) => {
     state.pagination.currentResultByPage = number
