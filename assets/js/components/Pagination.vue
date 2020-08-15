@@ -2,14 +2,14 @@
 	<div>
 		<ul class="pagination">
 			<li class="pagination__previous" v-show="currentPage > 1 && totalPages > 1">
-				<button @click.prevent="goPrev"><i class="fas fa-long-arrow-alt-left"></i> Page précédente</button>
+				<button @click.prevent="goPrev"><i class="fas fa-long-arrow-alt-left"></i> {{$t('default.previousPage')}}</button>
 			</li>
 			<li v-for="page in totalPages">
 				<button v-if="page !== currentPage" @click.prevent="goTo(page)">{{page}}</button>
 				<span v-else>{{page}}</span>
 			</li>
 			<li class="pagination__next" v-show="currentPage !== totalPages && totalPages > 0">
-				<button @click.prevent="goNext">Page suivante <i class="fas fa-long-arrow-alt-right"></i></button>
+				<button @click.prevent="goNext">{{$t('default.nextPage')}} <i class="fas fa-long-arrow-alt-right"></i></button>
 			</li>
 		</ul>
 	</div>

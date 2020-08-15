@@ -6,12 +6,57 @@
 
 {% block footscripts %}
     <script>
-        window.urlImg = '{{ urlImg }}';
-        window.apiEndPoints = {
-          partnerList: '/partners',
-          categoryList: '/categories',
-          countryList: '/countries'
-        }
+      window.urlImg = '{{ urlImg }}'
+      window.apiEndPoints = {
+        partnerList: '/partners',
+        categoryList: '/categories',
+        countryList: '/countries'
+      }
+      window.locale = 'en'
+      window.translations = {
+        en: {
+          default: {
+            sortBy: 'Sort by',
+            resultsByPage: 'Results by page',
+            lastAdded: 'Last added',
+            categories: 'Categories',
+            selectAll: 'Select all',
+            unselectAll: 'Unselect all',
+            localization: 'Localization',
+            findSolution: 'Find your solution',
+            search: 'Search',
+            nextPage: 'Next page',
+            previousPage: 'Previous page',
+            readMore: 'Read more',
+            availability: 'Availability area',
+            discoverSolution: 'Discover the solution',
+            backToSelection: 'Back to selection',
+            aboutUs: 'About us',
+            linkToSolution: 'Discover the solution'
+          }
+        },
+        fr: {
+          default: {
+            sortBy: 'Trier par',
+            resultsByPage: 'Résultats par page',
+            lastAdded: 'Derniers ajouts',
+            categories: 'Catégories',
+            selectAll: 'Tout séléctionner',
+            unselectAll: 'Tout déséléctionner',
+            localization: 'Localisation',
+            findSolution: 'Rechercher votre solution',
+            search: 'Rechercher',
+            nextPage: 'Page suivante',
+            previousPage: 'Page précédente',
+            readMore: 'En savoir plus',
+            availability: 'Disponibilité',
+            discoverSolution: 'Découvrir la solution',
+            backToSelection: 'Retour à votre séléction',
+            aboutUs: 'Qui sommes nous ?',
+            linkToSolution: 'Lien vers l\'éditeur'
+          }
+        },
+      }
     </script>
     {{ parent() }}
 {% endblock %}

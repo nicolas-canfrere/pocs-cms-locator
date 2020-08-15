@@ -10,16 +10,16 @@
 		<div class="col-4">
 			<div class="results-management">
 				<div>
-					<label class="results-management__label">Trier par&nbsp;:&nbsp;</label>
+					<label class="results-management__label">{{ $t('default.sortBy')}}&nbsp;:&nbsp;</label>
 					<select @change="orderBy">
 						<option value="alphaAsc">A - Z</option>
 						<option value="alphaDesc">Z - A</option>
-						<option value="lastAdded">Derniers ajouts</option>
+						<option value="lastAdded">{{ $t('default.lastAdded')}}</option>
 					</select>
 				</div>
 				<div class="spacer"></div>
 				<div class="hide-mobile-only">
-					<label class="results-management__label">Résultats par page&nbsp;:&nbsp;</label>
+					<label class="results-management__label">{{ $t('default.resultsByPage')}}&nbsp;:&nbsp;</label>
 					<select @change="changeResultsByPage">
 						<option v-for="result in resultsByPageConfig" :value="result">{{result}}</option>
 					</select>

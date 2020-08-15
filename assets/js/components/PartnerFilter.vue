@@ -3,7 +3,7 @@
 		<div class="filter__section" v-show="categories.length > 1">
 			<div class="section__title" @click="categorySectionOpen = !categorySectionOpen"
 				 :class="{'section-open': categorySectionOpen}">
-				Catégories
+				{{$t('default.categories')}}
 				<i class="section__title_arrow fas fa-chevron-down"></i>
 			</div>
 			<transition
@@ -28,8 +28,8 @@
 						</li>
 					</ul>
 					<a href="#" @click.prevent="toggleAllCategories" class="select-all">
-						<span v-if="allCategoriesSelected === false">Tout séléctionner</span>
-						<span v-else>Tout déséléctionner</span>
+						<span v-if="allCategoriesSelected === false">{{$t('default.selectAll')}}</span>
+						<span v-else>{{$t('default.unselectAll')}}</span>
 					</a>
 				</div>
 			</transition>
@@ -37,7 +37,7 @@
 		<div class="filter__section" v-show="countries.length > 1">
 			<div class="section__title" @click="countrySectionOpen = !countrySectionOpen"
 				 :class="{'section-open': countrySectionOpen}">
-				Localisation
+				{{$t('default.localization')}}
 				<i class="section__title_arrow fas fa-chevron-down"></i>
 			</div>
 			<transition
@@ -54,7 +54,7 @@
 							:close-on-select="false"
 							:clear-on-select="false"
 							:preserve-search="false"
-							placeholder="Rechercher..."
+							:placeholder="`${$t('default.search')}...`"
 							label="label"
 							track-by="id"
 							:preselect-first="false"
@@ -69,7 +69,7 @@
 		<div class="filter__section">
 			<div class="section__title" @click="searchSectionOpen = !searchSectionOpen"
 				 :class="{'section-open': searchSectionOpen}">
-				Rechercher quelque chose
+				{{$t('default.findSolution')}}
 				<i class="section__title_arrow fas fa-chevron-down"></i>
 			</div>
 			<transition

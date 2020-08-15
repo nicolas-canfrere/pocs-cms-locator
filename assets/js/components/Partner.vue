@@ -11,12 +11,12 @@
 				<div class="partner__content">
 					<div class="partner__excerpt" v-html="shortText"></div>
 					<div class="partner__infos">
-						Disponibilité: <span class="text-bold">{{partner.country_partner}}</span>
+						{{$t('default.availability')}}: <span class="text-bold">{{partner.country_partner}}</span>
 					</div>
 				</div>
 				<div class="partner__footer">
 					<router-link :to="{name: 'single', params: {id: partner.id}}" exact class="partner__footer__action">
-						En savoir plus
+						{{$t('default.readMore')}}
 					</router-link>
 				</div>
 			</div>

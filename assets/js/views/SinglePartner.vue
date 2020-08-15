@@ -3,7 +3,7 @@
 		<div class="loc-container">
 			<div class="mt-4 mb-4">
 				<router-link :to="{name: 'home'}" exact class="outlined-btn"><i class="fas fa-long-arrow-alt-left"></i>
-					Retour à la liste
+					{{$t('default.backToSelection')}}
 				</router-link>
 			</div>
 			<div class="loc-grid single-partner">
@@ -24,7 +24,7 @@
 										class="fas fa-cloud fa-flip-horizontal"></i> Open Trusted Cloud<sup>tm</sup></span>
 							</div>
 							<div class="partner__action">
-								<a :href="partner.url" class="outlined-btn" target="_blank">Découvrir la solution</a>
+								<a :href="partner.url" class="outlined-btn" target="_blank">{{$t('default.discoverSolution')}}</a>
 							</div>
 						</div>
 					</div>
@@ -34,7 +34,7 @@
 						</div>
 						<div class="single-partner__section" v-html="partner.summary_descrip"></div>
 						<div class="single-partner__section">
-							Disponibilité: <span class="text-bold">{{partner.country_partner}}</span>
+							{{$t('default.availability')}}: <span class="text-bold">{{partner.country_partner}}</span>
 						</div>
 						<div class="single-partner__section hide-mobile">
 							<span class="open-trusted-cloud-logo"><i class="fas fa-cloud fa-flip-horizontal"></i> Open Trusted Cloud<sup>tm</sup></span>
@@ -80,10 +80,10 @@
 							<img :src="partnerLogo" class="img-resp">
 						</div>
 						<div class="col-4 p-8">
-							<h3>Qui sommes nous ?</h3>
+							<h3>{{$t('default.aboutUs')}}</h3>
 							<p v-html="partner.description"></p>
 							<p>
-								<a :href="partner.url" class="outlined-btn" target="_blank">Lien vers l'éditeur</a>
+								<a :href="partner.url" class="outlined-btn" target="_blank">{{$t('default.linkToSolution')}}</a>
 							</p>
 						</div>
 					</div>
