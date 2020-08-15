@@ -9,20 +9,30 @@
 		</div>
 		<div class="col-4">
 			<div class="results-management">
-				<div>
+				<div class="results-management__select">
 					<label class="results-management__label">{{ $t('default.sortBy')}}&nbsp;:&nbsp;</label>
-					<select @change="orderBy">
-						<option value="alphaAsc">A - Z</option>
-						<option value="alphaDesc">Z - A</option>
-						<option value="lastAdded">{{ $t('default.lastAdded')}}</option>
-					</select>
+					<div class="custom-select">
+						<select @change="orderBy">
+							<option value="alphaAsc">A - Z</option>
+							<option value="alphaDesc">Z - A</option>
+							<option value="lastAdded">{{ $t('default.lastAdded')}}</option>
+						</select>
+						<div class="custom-select__arrow">
+							<i class="fas fa-caret-down"></i>
+						</div>
+					</div>
 				</div>
 				<div class="spacer"></div>
-				<div class="hide-mobile-only">
+				<div class="results-management__select hide-mobile-only">
 					<label class="results-management__label">{{ $t('default.resultsByPage')}}&nbsp;:&nbsp;</label>
-					<select @change="changeResultsByPage">
-						<option v-for="result in resultsByPageConfig" :value="result">{{result}}</option>
-					</select>
+					<div class="custom-select">
+						<select @change="changeResultsByPage">
+							<option v-for="result in resultsByPageConfig" :value="result">{{result}}</option>
+						</select>
+						<div class="custom-select__arrow">
+							<i class="fas fa-caret-down"></i>
+						</div>
+					</div>
 				</div>
 			</div>
 			<partner-list></partner-list>
