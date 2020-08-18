@@ -12,8 +12,8 @@ export default {
   },
   pagination: {
     currentPage: 1,
-    resultsByPage: [3,6,9],
-    currentResultByPage: 3,
+    resultsByPage: [12,24,36],
+    currentResultByPage: 12,
     totalPages: 0
   }
 }
