@@ -52,7 +52,7 @@
 				<div class="col">
 					<div class="single__partner__video">
 						<div class="video-resp">
-							<iframe :src="partner.video_link" frameborder="0"></iframe>
+							<div v-html="partner.video_link"></div>
 						</div>
 					</div>
 				</div>

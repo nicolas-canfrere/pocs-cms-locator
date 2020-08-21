@@ -45,7 +45,7 @@ class LocatorController extends AbstractController
                 'created'             => (new \DateTime('2019-01-01 00:00:00'))->format('c'),
                 'punchline'           => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
                 'arguments'           => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae finibus justo. In hac habitasse platea dictumst. Aenean sit amet porttitor metus. Donec aliquet nulla eu arcu pretium, at tempor turpis varius. Nullam sed arcu sem. Aenean libero nisi, tristique vel iaculis sed, bibendum non nisl. Integer egestas lectus dictum odio tempus convallis. Aenean cursus nisl facilisis, sollicitudin ipsum id, lacinia risus. Suspendisse lobortis libero ut pretium facilisis. In eget dapibus eros. Cras et nibh suscipit eros elementum hendrerit nec non neque. Vivamus dignissim enim lacus, ut laoreet nunc cursus nec. Etiam iaculis eu ipsum ultricies suscipit. Quisque mattis eros non lectus consequat, et iaculis ex imperdiet.',
-                'video_link' => 'https://www.youtube.com/embed/ajjCnRCX19w',
+                'video_link' => '<iframe width="560" height="315" src="https://www.youtube.com/embed/oS7A-we5Smw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
             ],
             [
                 'id'                  => 2,
