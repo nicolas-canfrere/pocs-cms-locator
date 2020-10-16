@@ -17,9 +17,10 @@ export default {
       return Promise.resolve()
     })
   },
-  initPartners: ({ commit }) => {
+  initPartners: ({ commit, dispatch }) => {
     return axios.get(endPoints.partnerList).then((response) => {
       commit('INIT_PARTNERS', response.data)
+      dispatch('postMessageToTopWindowAboutContentHeight')
       return Promise.resolve()
     })
   },
@@ -65,6 +66,7 @@ export default {
   },
   changeResultsByPage: ({ commit, dispatch }, number) => {
     commit('CHANGE_RESULTS_BY_PAGE', number)
+    dispatch('postMessageToTopWindowAboutContentHeight')
   },
   paginationPreviousPage: ({ commit, dispatch }, previous) => {
     commit('PAGINATION_PREVIOUS_PAGE', previous)
@@ -78,10 +80,23 @@ export default {
     commit('PAGINATION_GO_TO', page)
     dispatch('paginate', page)
   },
-  reIntiPagination: ({commit}) => {
+  reIntiPagination: ({commit, dispatch}) => {
     commit('REINIT_PAGINATION')
+    dispatch('postMessageToTopWindowAboutContentHeight')
   },
-  paginate: ({ commit }, page) => {
+  paginate: ({ commit, dispatch }, page) => {
     commit('PAGINATE', page)
+    dispatch('postMessageToTopWindowAboutContentHeight')
+  },
+  postMessageToTopWindowAboutContentHeight: () => {
+    const timer = setTimeout(() => {
+      let height = document.body.clientHeight;
+      let params = {
+        "height" : height,
+        "iframeId" : "OTC"
+      };
+      window.top.postMessage(params, "*")
+      clearTimeout(timer)
+    })
   }
 }

@@ -70,6 +70,9 @@
       window.addEventListener('resize', e => {
         this.openFilterMenu = false
       }, false)
+    },
+    mounted () {
+      this.$store.dispatch('postMessageToTopWindowAboutContentHeight')
     }
   }
 </script>

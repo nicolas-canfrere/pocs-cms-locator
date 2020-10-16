@@ -117,6 +117,9 @@
         this.$router.push({ name: 'home' })
       }
       this.partnerLogo = window.urlImg + this.partner.logo
+    },
+    mounted () {
+      this.$store.dispatch('postMessageToTopWindowAboutContentHeight')
     }
   }
 </script>
